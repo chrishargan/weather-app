@@ -42,3 +42,8 @@ body {
 .degree-section h2 {
   font-size: 40px;
 }
+.footer-info {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 50vh;
+}
