@@ -7,9 +7,6 @@
 body {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   background-image: linear-gradient(
     to right top,
     #02142e,
@@ -22,28 +19,106 @@ body {
   color: whitesmoke;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5vh;
+}
+
+.search-box {
+  padding: 1.5vh;
+}
+
+.search-button {
+}
+
 .location {
-  height: 30vh;
-  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.degree-section {
-  display: flex;
-  align-items: center;
+#geo-location {
+  font-size: 60px;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
-.degree-section span {
-  margin: 10px;
-  font-size: 30px;
+#search-button {
+  cursor: pointer;
 }
-.degree-section h2 {
-  font-size: 40px;
+
+.forecast {
+  justify-content: space-around;
+  padding: 1vh;
+  align-items: center;
+  justify-items: center;
 }
+
+.daycast {
+  display: grid;
+  align-items: center;
+  padding: 1vh;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #02142e,
+    #004469,
+    #007ca3,
+    #00b9d4,
+    #04f9f9
+  );
+  border-radius: 25px;
+}
+.container {
+  display: grid;
+  align-items: center;
+  padding: 3vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.weather-today {
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+}
+
+.weather-now {
+  display: grid;
+  align-items: center;
+  padding: 4vh;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(
+    to right top,
+    #02142e,
+    #004469,
+    #007ca3,
+    #00b9d4,
+    #04f9f9
+  );
+  border-radius: 25px;
+}
+
 .footer-info {
   display: flex;
   align-items: flex-end;
   padding-top: 50vh;
+}
+.weather-today img {
+  height: 190px;
+  width: auto;
+}
+
+.daycast img {
+  height: 70px;
+  width: auto;
+  display: flex;
 }
