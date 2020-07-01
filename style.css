@@ -39,8 +39,6 @@ body {
   border-radius: 25px;
   padding: 2vh;
 }
-.header h1 {
-}
 
 .main {
   width: 100%;
@@ -49,9 +47,6 @@ body {
 #search-bar {
   width: 30vh;
   margin: 3vh;
-}
-
-.search-button {
 }
 
 .location {
@@ -141,10 +136,4 @@ body {
   height: 70px;
   width: auto;
   display: flex;
-}
-
-@media only screen (min-width: 600px) {
-  .header {
-    display: table-column;
-  }
 }
