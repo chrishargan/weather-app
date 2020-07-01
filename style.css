@@ -88,7 +88,12 @@ body {
     #04f9f9
   );
   border-radius: 25px;
+  transition: 200ms;
 }
+.daycast:hover {
+  transform: scale(1.2);
+}
+
 .container {
   display: grid;
   align-items: center;
@@ -121,6 +126,10 @@ body {
     #04f9f9
   );
   border-radius: 25px;
+  transition: 200ms;
+}
+.weather-now:hover {
+  transform: scale(1.2);
 }
 
 .weather-today img {
