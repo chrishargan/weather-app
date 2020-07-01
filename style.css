@@ -7,27 +7,29 @@
 body {
   height: 100vh;
   display: flex;
-  background-image: linear-gradient(
-    to right top,
-    #02142e,
-    #004469,
-    #007ca3,
-    #00b9d4,
-    #04f9f9
-  );
+  background-image: url(assets/peyman-farmani-UclyYWTFK7w-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: sans-serif;
   color: whitesmoke;
+  flex-wrap: wrap;
 }
 
 .header {
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 5vh;
 }
 
-.search-box {
-  padding: 1.5vh;
+.input {
+}
+
+#search-bar {
+  width: 30vh;
+  margin: 3vh;
 }
 
 .search-button {
@@ -38,12 +40,6 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-#geo-location {
-  font-size: 60px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 
 #search-button {
   cursor: pointer;
@@ -51,7 +47,7 @@ body {
 
 .forecast {
   justify-content: space-around;
-  padding: 1vh;
+  padding: 2vh;
   align-items: center;
   justify-items: center;
 }
@@ -59,7 +55,8 @@ body {
 .daycast {
   display: grid;
   align-items: center;
-  padding: 1vh;
+  margin: 20px;
+  padding: 20px;
   align-items: center;
   justify-content: space-around;
   justify-items: center;
@@ -107,11 +104,6 @@ body {
   border-radius: 25px;
 }
 
-.footer-info {
-  display: flex;
-  align-items: flex-end;
-  padding-top: 50vh;
-}
 .weather-today img {
   height: 190px;
   width: auto;

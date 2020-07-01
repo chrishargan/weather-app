@@ -53,6 +53,8 @@ const addForecastPerDay = (list, count) => {
         return prev < curr ? prev : curr                         // minimum temperature
     })
 
+
+
     forecast.innerHTML += `
     <div class ="daycast">
 
@@ -112,23 +114,54 @@ document.getElementById("search-button").addEventListener("click", () => {
 
             }
         })
+
+        .then(_ => {
+            fetch(`http://api.unsplash.com/search/photos?client_id=yBzycK5C-dNu-34jZg39uzARyxVrE4DOw4ejxdLSszk&page=1&query=${city}`)                      // key is yBzycK5C-dNu-34jZg39uzARyxVrE4DOw4ejxdLSszk
+                .then(response => response.json())
+                .then(data => {
+                    let url = data.results[Math.floor(Math.random() * 10)].urls.regular;
+                    document.body.style.backgroundImage = `url(${url})`
+                    document.body.style.backgroundPosition = "center"
+                    document.body.style.backgroundRepeat = "no-repeat"
+                    document.body.style.backgroundSize = "cover"
+                })
+        })
 });
 
 
-document.getElementById("geo-location").addEventListener("click", () => {
 
+
+
+/*
+
+document.getElementById("geo-location").addEventListener("click", () => {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
+
+
             let longitude = position.coords.longitude;
             let latitude = position.coords.latitude;
-
             const api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=b8b008d6f3645b497e4478b5f7ae8916`
 
             fetch(api)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data.list)
+                    console.log(data)
+
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById("weather-today").innerHTML = `
+             <div class="weather-now">
+             <h1> Today in </h1>
+             <h2> ${data.main.name} </h2>
+            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"
+        alt = "${data.weather[0].description}"
+        title = "${data.weather[0].main}">
+             <h1> ${data.main.temp}°C </h1>
+             </div>
+        `
+                        })
 
                 })
                 .catch(err => alert("Error finding data"))
@@ -137,3 +170,4 @@ document.getElementById("geo-location").addEventListener("click", () => {
     }
 });
 
+*/
